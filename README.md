@@ -18,7 +18,7 @@ As of version 3.6, WordPress doesn't have Composer support. Using this fork you 
 
 ## Configuration
 
-A tipical file tree using WordPress and Composer is:
+A tipical file tree using WordPress and Composer is
 
 	+ wp-content 		# Defined by WP_CONTENT_DIR, WP_CONTENT_URL
 	  	+ themes		
@@ -31,11 +31,14 @@ A tipical file tree using WordPress and Composer is:
 	- index.php			# Must require './wordpress/wp-blog-header.php'
 
 
-In order to run WordPress the following constants must be set in `wp-config.php`
+
+In order to run WordPress the following constants must be set in `wp-config.php` ([example][wp-config])
 
 - `WP_HOME`, URL of public area.
 - `WP_SITEURL`, URL of WordPress instalation
 - `WP_CONTENT_DIR` and `WP_CONTENT_URL`, Path and url for wp-content folder. `themes` and `languages` folders must be within `wp-content` and cannot be configurable
+
+[wp-config]: https://github.com/cesarhdz/ixa-wordpress-core/blob/master/example/wp-config.php
 
 additionally, `wp-config.php` is a good place to require `vendor/autoload.php`.
 
