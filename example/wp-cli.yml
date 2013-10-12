@@ -1,0 +1,3 @@
+# Archivo de configuracion de wp-cli
+# Path determinado en composer.json
+path: wordpress

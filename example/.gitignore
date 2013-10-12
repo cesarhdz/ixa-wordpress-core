@@ -1,0 +1,7 @@
+# Composer WordPress
+vendor/
+wordpress/
+composer.lock
+
+# PHP Server
+mailoutput

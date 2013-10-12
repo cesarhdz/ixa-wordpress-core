@@ -1,0 +1,5 @@
+{
+    "require": {
+        "ixa/wordpress-core": "~3.6"
+    }
+}

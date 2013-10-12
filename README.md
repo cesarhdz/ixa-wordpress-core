@@ -1,6 +1,9 @@
 # Ixa WordPress Core
 
-WordPress fork that works with Composer.
+[WordPress] fork that works with [Composer].
+
+[Composer]: http://getcomposer.org/
+[WordPress]: http://wordpress.org/
 
 As of version 3.6, WordPress doesn't have Composer support. Using this fork you get a WordPress ready to be use as dependency in its own folder, and don't have to wait [until WordPress core have built-in support][ticket].
 
@@ -33,4 +36,13 @@ In order to run WordPress the following constants must be set in `wp-config.php`
 - `WP_HOME`, URL of public area.
 - `WP_SITEURL`, URL of WordPress instalation
 - `WP_CONTENT_DIR` and `WP_CONTENT_URL`, Path and url for wp-content folder. `themes` and `languages` folders must be within `wp-content` and cannot be configurable
+
+additionally, `wp-config.php` is a good place to require `vendor/autoload.php`.
+
+And finally the index file must have the following:
+
+	<?php
+		define('WP_USE_THEMES', true);
+		require('./wordpress/wp-blog-header.php');
+
 
