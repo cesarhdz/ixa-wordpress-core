@@ -185,15 +185,15 @@ $(document).ready( function() {
 			if ( body.hasClass('auto-fold') ) {
 				body.removeClass('auto-fold').removeClass('folded');
 				setUserSetting('unfold', 1);
-				setUserSetting('mfold', 'o');
+				deleteUserSetting('mfold');
 			} else {
 				body.addClass('auto-fold');
-				setUserSetting('unfold', 0);
+				deleteUserSetting('unfold');
 			}
 		} else {
 			if ( body.hasClass('folded') ) {
 				body.removeClass('folded');
-				setUserSetting('mfold', 'o');
+				deleteUserSetting('mfold');
 			} else {
 				body.addClass('folded');
 				setUserSetting('mfold', 'f');
