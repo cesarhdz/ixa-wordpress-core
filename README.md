@@ -32,5 +32,5 @@ In order to run WordPress the following constants must be set in `wp-config.php`
 
 - `WP_HOME`, URL of public area.
 - `WP_SITEURL`, URL of WordPress instalation
-- `WP_CONTENT_DIR` and `WP_CONTENT_URL`, Path and url for wp-content folder. `themes` and `languages` folders must be within `wp-content` and cannot be confurable
+- `WP_CONTENT_DIR` and `WP_CONTENT_URL`, Path and url for wp-content folder. `themes` and `languages` folders must be within `wp-content` and cannot be configurable
 
