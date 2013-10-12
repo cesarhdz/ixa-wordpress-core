@@ -1,0 +1,61 @@
+#!/bin/bash
+#
+# Upgrade
+# Downloads and place in its right place WordPress files
+# usage:
+# 	bin/upgrade version
+# 	
+# example:
+# 	bin/upgrade 3.6.1
+
+wp_version=$1
+
+
+wp_folder=wordpress
+
+wp_tar_file="wordpress-${wp_version}.tar.gz"
+wp_download_url="http://wordpress.org/${wp_tar_file}"
+
+
+
+echo "Removing current instalation"
+## Delete all wp-files but ignored files, but wp-config
+rm -f $(ls -l *.php | grep -v wp-config | awk '{print $9}')
+
+## txt 6 html removed
+rm -f *.txt *.html
+
+## Remove WordPress dirs
+rm -fr wp-content wp-includes wp-admin ${wp_folder}
+
+
+# Download and install
+echo "Downloading WordPress from ${wp_download_url}"
+curl -O ${wp_download_url}
+
+## Decompress
+echo "Decompressing WordPress files..."
+tar -xf ${wp_tar_file}
+
+
+## Enhancing WordPress
+echo "Enhancing WordPress"
+
+## Replace index.php wiht Silence is golden
+cp -f "${wp_folder}/wp-content/index.php" "${wp_folder}/index.php"
+
+## Delete wp-content, no longer needed
+rm -fr "${wp_folder}/wp-content/"
+
+echo "Cleaning Removing files"
+
+## Move to root
+mv -f ${wp_folder}/* ./
+
+## Delete tar an wordpress folder
+rm ${wp_tar_file}
+rm -fR ${wp_folder}
+
+
+echo "WordPress was Succesfully upgraded to version [${wp_version}]"
+
