@@ -1,0 +1,28 @@
+{
+    "name": "ixa/wordpress-core",
+    "description": "WordPress fork that works with Composer",
+    "require": {
+        "php": ">=5.3.2",
+        "johnpbloch/wordpress-core-installer": "~0.2"
+    },
+    "type": "wordpress-core",
+    "keywords": ["wordpress"],
+    "homepage": "http://wordpress.org/",
+    "license": "GPL-2.0+",
+    "authors": [
+        {
+            "name": "WordPress Community",
+            "homepage": "http://wordpress.org/about/"
+        }
+    ],
+    "suggest": {
+        "wp-cli/wp-cli": "Allows command line interaction with WordPress `composer global require wp-cli/wp-cli"
+    }
+    "support": {
+        "issues": "http://core.trac.wordpress.org/",
+        "forum": "http://wordpress.org/support/",
+        "wiki": "http://codex.wordpress.org/",
+        "irc": "irc://irc.freenode.net/wordpress",
+        "source": "http://core.trac.wordpress.org/browser"
+    }
+}
