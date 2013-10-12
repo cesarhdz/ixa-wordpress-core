@@ -17,7 +17,7 @@
     ],
     "suggest": {
         "wp-cli/wp-cli": "Allows command line interaction with WordPress `composer global require wp-cli/wp-cli"
-    }
+    },
     "support": {
         "issues": "http://core.trac.wordpress.org/",
         "forum": "http://wordpress.org/support/",
