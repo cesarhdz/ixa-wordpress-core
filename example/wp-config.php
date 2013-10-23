@@ -112,3 +112,7 @@ define('WP_CONTENT_URL', WP_HOME . 'wp-content');
  * Composer autoload Required
  */
 require_once('vendor/autoload.php');
+
+
+/** Sets up WordPress vars and included files. */
+require_once(ABSPATH . 'wp-settings.php');

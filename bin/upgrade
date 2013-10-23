@@ -19,11 +19,8 @@ wp_download_url="http://wordpress.org/${wp_tar_file}"
 
 
 echo "Removing current instalation"
-## Delete all wp-files but ignored files, but wp-config
-rm -f $(ls -l *.php | grep -v wp-config | awk '{print $9}')
-
-## txt 6 html removed
-rm -f *.txt *.html
+## Delete all php, txt and html files in root
+rm -f *.php *.txt *.html
 
 ## Remove WordPress dirs
 rm -fr wp-content wp-includes wp-admin ${wp_folder}
