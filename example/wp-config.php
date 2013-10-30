@@ -103,9 +103,12 @@ define('WP_CONTENT_DIR', dirname(__FILE__) . '/wp-content');
 define('WP_CONTENT_URL', WP_HOME . 'wp-content');
 
 /**
- * PHP Memory
+ * Automatic Updates
+ * more info: http://make.wordpress.org/core/2013/10/25/the-definitive-guide-to-disabling-auto-updates-in-wordpress-3-7/
  */
-// define( 'WP_MEMORY_LIMIT', '64M' );
+
+// Let's delegate dependency mangaement to Composer
+define( 'AUTOMATIC_UPDATER_DISABLED', 'true' );
 
 
 /**
