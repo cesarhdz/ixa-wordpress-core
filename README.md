@@ -12,9 +12,14 @@ As of version 3.6, WordPress doesn't have Composer support. Using this fork you 
 ## Installation
 
 	require: {
-		"ixa/wordpress-core" : "~3.6"
+		"ixa/wordpress-core" : "~3.8"
 	}
 
+If you are starting a new project, you can use [Ixa WordPress Starter] to get WordPress core and configuration files, running only one command
+
+	$ composer create-project ixa/wordpress-starter <project-name>
+
+[Ixa WordPress Starter]: https://github.com/cesarhdz/ixa-wordpress-starter
 
 ## Configuration
 
