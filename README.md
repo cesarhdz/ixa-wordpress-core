@@ -5,14 +5,14 @@
 [Composer]: http://getcomposer.org/
 [WordPress]: http://wordpress.org/
 
-As of version 3.6, WordPress doesn't have Composer support. Using this fork you get a WordPress ready to be use as dependency in its own folder, and don't have to wait [until WordPress core have built-in support][ticket].
+As of version 3.9, WordPress doesn't have Composer support. Using this fork you get a WordPress ready to be use as dependency in its own folder, and don't have to wait [until WordPress core have built-in support][ticket].
 
 [ticket]: http://core.trac.wordpress.org/attachment/ticket/23912/composer.3.patch
 
 ## Installation
 
 	require: {
-		"ixa/wordpress-core" : "~3.8"
+		"ixa/wordpress-core" : "~3.9"
 	}
 
 If you are starting a new project, you can use [Ixa WordPress Starter] to get WordPress core and configuration files, running only one command
