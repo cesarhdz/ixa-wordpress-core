@@ -27,16 +27,16 @@ rm -fr wp-content wp-includes wp-admin ${wp_folder}
 
 
 # Download and install
-echo "Downloading WordPress from ${wp_download_url}"
+echo "* Downloading WordPress from ${wp_download_url}"
 curl -O ${wp_download_url}
 
 ## Decompress
-echo "Decompressing WordPress files..."
+echo "* Inflating WordPress files..."
 tar -xf ${wp_tar_file}
 
 
 ## Enhancing WordPress
-echo "Enhancing WordPress"
+echo "* Enhancing WordPress..."
 
 ## Replace index.php wiht Silence is golden
 cp -f "${wp_folder}/wp-content/index.php" "${wp_folder}/index.php"
@@ -44,7 +44,7 @@ cp -f "${wp_folder}/wp-content/index.php" "${wp_folder}/index.php"
 ## Delete wp-content, no longer needed
 rm -fr "${wp_folder}/wp-content/"
 
-echo "Cleaning Removing files"
+echo "* Cleaning & Removing files..."
 
 ## Move to root
 mv -f ${wp_folder}/* ./
