@@ -14,7 +14,7 @@ wp_version=$1
 wp_folder=wordpress
 
 wp_tar_file="wordpress-${wp_version}.tar.gz"
-wp_download_url="http://wordpress.org/${wp_tar_file}"
+wp_download_url="https://wordpress.org/${wp_tar_file}"
 
 
 
